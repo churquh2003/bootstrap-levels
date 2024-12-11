@@ -1,13 +1,30 @@
 Rails.application.routes.draw do
-  get("/", { :controller => "levels", :action => "instructions" })
+  get 'levels/primary_button'
+  get 'levels/other_buttons'
+  get 'levels/add_bootstrap'
+  get 'levels/utility_classes'
+  get 'levels/card'
+  get 'levels/toast'
+  get 'levels/modal'
+  get 'levels/navbar'
+  get 'levels/grid'
+  get 'levels/dynamic_list_group'
 
-  get("/levels/00_primary_button", { :controller => "levels", :action => "primary_button" })
-  get("/levels/01_other_buttons", { :controller => "levels", :action => "other_buttons" })
-  get("/levels/02_utility_classes", { :controller => "levels", :action => "utility_classes" })
-  get("/levels/03_card", { :controller => "levels", :action => "card" })
-  get("/levels/04_modal", { :controller => "levels", :action => "modal" })
-  get("/levels/05_navbar", { :controller => "levels", :action => "navbar" })
-  get("/levels/06_grid", { :controller => "levels", :action => "grid" })
-  get("/levels/07_dynamic_list_group", { :controller => "levels", :action => "dynamic_list_group" })
-  get("/levels/08_toast", { :controller => "levels", :action => "toast" })
+  get 'instructions/primary_button'
+  get 'instructions/other_buttons'
+  get 'instructions/add_bootstrap'
+  get 'instructions/utility_classes'
+  get 'instructions/frequently_used_components'
+  get 'instructions/grid'
+  get 'instructions/dynamic_list_group'
+
+  get 'targets/utility_classes'
+  get 'targets/card'
+  get 'targets/toast'
+  get 'targets/modal'
+  get 'targets/navbar'
+  get 'targets/grid'
+  get 'targets/dynamic_list_group'
+
+  root 'instructions#toc'
 end
