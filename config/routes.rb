@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :installs
   get("/", { :controller => "levels", :action => "instructions" })
 
   get("/levels/00_primary_button", { :controller => "levels", :action => "primary_button" })
